@@ -1,0 +1,5 @@
+DBNAME='account_db'
+USER='isand'
+HOST='193.232.208.58'
+PORT='5432'
+PASSWORD='sf3dvxQFWq@!'

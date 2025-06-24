@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {height: 100%; width: 100%;}
+body {height: inherit; width: inherit;}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    padding: 20px;
+}
+
+main {
+    width: inherit;
+    height: inherit;
+    border-radius: 10px;
+    box-shadow: 4px 4px 32px 0px rgba(0, 34, 102, 0.15);
+}
+
+#button-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: none;
+    cursor: pointer;
+}
+
+.window {
+    background-color: #FFFAFA;
+    display: flex;
+}
+
+.control_block {
+    height: inherit;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-right: solid 5px grey;
+}
+
+.info {
+    height: inherit;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.statistic {
+    height: inherit;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.date {
+    height: 40px;
+    width: 100%;
+}
+
+button {
+    width: 30%;
+    padding: 10px 5px;
+    font-weight: 600;
+    color: #000;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+#start {
+    background-color: #00FF00;
+}
+
+#stop {
+    background-color: #FF4500;
+}
+
+#reset {
+    background-color: #FFFF00;
+}
+
+#status {
+    font-size: xx-large;
+}

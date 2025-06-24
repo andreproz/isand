@@ -1,0 +1,70 @@
+---
+# This is the internal user database
+# The hash value is a bcrypt hash and can be generated with plugin/tools/hash.sh
+
+_meta:
+  type: "internalusers"
+  config_version: 2
+
+# Define your internal users here
+
+isand:
+  hash: "$2y$12$m2hOy2fNpiQ/rZALXExGR.CKxEnVtQff14.zBOBsRb/QGBYRBFF.C"
+  reserved: false
+  backend_roles:
+  - "admin"
+  description: "Isand user"
+
+## users
+
+admin:
+  hash: "$2y$12$rptifQiWa/CpTk7BJSH1IuhFwcaYmcqvn/1WPWpNjUisf.DPm6Bh."
+  reserved: true
+  backend_roles:
+  - "admin"
+  description: "Admin user"
+
+anomalyadmin:
+  hash: "$2y$12$rptifQiWa/CpTk7BJSH1IuhFwcaYmcqvn/1WPWpNjUisf.DPm6Bh."
+  reserved: false
+  opendistro_security_roles:
+  - "anomaly_full_access"
+  description: "Anomaly admin user, using internal role"
+
+kibanaserver:
+  hash: "$2y$12$rptifQiWa/CpTk7BJSH1IuhFwcaYmcqvn/1WPWpNjUisf.DPm6Bh."
+  reserved: true
+  description: "OpenSearch Dashboards user"
+
+kibanaro:
+  hash: "$2y$12$rptifQiWa/CpTk7BJSH1IuhFwcaYmcqvn/1WPWpNjUisf.DPm6Bh."
+  reserved: false
+  backend_roles:
+  - "kibanauser"
+  - "readall"
+  attributes:
+    attribute1: "value1"
+    attribute2: "value2"
+    attribute3: "value3"
+  description: "OpenSearch Dashboards read only user, using external role mapping"
+
+logstash:
+  hash: "$2y$12$rptifQiWa/CpTk7BJSH1IuhFwcaYmcqvn/1WPWpNjUisf.DPm6Bh."
+  reserved: false
+  backend_roles:
+  - "logstash"
+  description: "Logstash user, using external role mapping"
+
+readall:
+  hash: "$2y$12$rptifQiWa/CpTk7BJSH1IuhFwcaYmcqvn/1WPWpNjUisf.DPm6Bh."
+  reserved: false
+  backend_roles:
+  - "readall"
+  description: "Readall user, using external role mapping"
+
+snapshotrestore:
+  hash: "$2y$12$rptifQiWa/CpTk7BJSH1IuhFwcaYmcqvn/1WPWpNjUisf.DPm6Bh."
+  reserved: false
+  backend_roles:
+  - "snapshotrestore"
+  description: "Snapshotrestore user, using external role mapping"
